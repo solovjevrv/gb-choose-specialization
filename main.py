@@ -7,19 +7,9 @@
 # [“Hello”, “2”, “world”, “:-)”] → [“2”, “:-)”]
 # [“1234”, “1567”, “-2”, “computer science”] → [“-2”]
 # [“Russia”, “Denmark”, “Kazan”] → []
-input_array = ['Hello', '2', 'world', ':-)']
-input_array_2 = ['1234', '1567', '-2', 'computer science']
-input_array_3 = ['Russia', 'Denmark', 'Kazan']
-input_array_empty = []
 
-def filter_array(array):
-  if(len(array) > 0):
-    output_array = []
-    for el in array:
-      if (len(el) <= 3):
-        output_array.append(el)
-    return output_array
-  else: print("Исходный массив должен содержать данные")
+from modules.func import filter_array
+from modules.request_array import requsetArrayFromUser
 
-
-print(filter_array(input_array_empty))
+input_user_array = requsetArrayFromUser()
+print(filter_array(input_user_array))
